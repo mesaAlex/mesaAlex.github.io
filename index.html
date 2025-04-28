@@ -70,8 +70,64 @@
         <br><br>
         Together, these crash data points complement disengagement analysis by illustrating that although AV systems are becoming more reliable actually 
         navigating real-world environments remains a critical problem on the path toward full autonomy.
-
+        <hr>
     </p>
+
+    <div style="display: flex; justify-content: space-between; gap: 20px;"></div>
+        <div style="flex: 1; border: 1px solid #ccc; padding: 10px;">
+            <h3><b><u>Challenges Encountered and Addressed</u></b></h3>
+            <p>
+                While I was working on my project, I encountered several issues. Some encountered are when 
+                cleaning and visualizing the data. Originally, when building the crash heatmap, only a single 
+                point appeared on the map because the latitude and longitude fields were not properly assigned 
+                which needed me to reconfigure the data source to correctly map geographic coordinates.
+                <br><br>
+                Another challenge involved preparing the injury outcome data. The injury field had inconsistent 
+                entries, making it necessary to create “calculated fields” that cleaned and categorized the data 
+                into a simple “Yes” or “No” outcome for injuries. Setting up the pie chart visualization made me 
+                manually create a counting mechanism because Tableau did not automatically recognize the need to 
+                aggregate “Yes” and “No” outcomes separately.
+                <br><br>
+                These challenges were fixed through calculated fields, reorganization of the data structure inside 
+                Tableau, and adjustments to field aggregations to make sure correct visual outputs.
+
+            </p>
+        </div>
+        <div style="flex: 1; border: 1px solid #ccc; padding: 10px;">
+            <h3><b><u>Design Decisions</u></b></h3>
+            <p>
+                Each visualization I used with the intention to best represent specific aspects of the autonomous 
+                vehicle (AV) data and aligns with my project’s goal of demonstrating technological improvement. A 
+                heatmap was used to visualize crash locations, as it effectively conveys spatial density and highlights 
+                geographic patterns of incidents. Pie charts were selected to represent injury outcomes because they 
+                provide a fast, intuitive understanding of proportions between injury and non-injury events.
+                <br><br>
+                Bar charts were used to compare total disengagements, miles driven, crashes by company, and crashes 
+                by road type, allowing for straightforward comparison between different things in the study. Finally, 
+                a line chart was used to visualize disengagement rates over time, as line charts are ideal for highlighting 
+                trends and demonstrating improvements over multiple years. These design decisions were made to maintain 
+                clarity, audience engagement, and to directly support the narrative that AV systems are becoming more 
+                reliable over time.
+
+            </p>
+        </div>
+        <div style="flex: 1; border: 1px solid #ccc; padding: 10px;">
+            <h3><b><u>Future Work</u></b></h3>
+            <p>
+                While my project was focused on crash and disengagement data from California between the years 2014 and 
+                2020 when thinking about future work I could expand the analysis in several ways. Incorporating more 
+                recent data would provide a clearer view of current trends especially as AV technologies continue to evolve. 
+                Also increasing the scope beyond California to include additional states or countries would help generalize 
+                the findings and assess how AV systems perform under different regulatory, geographic, and traffic conditions.
+                <br><br>
+                Additionally in future analysis I could examine more detailed crash severity metrics for example like property damage levels 
+                or near-miss incidents and correlate them with disengagement patterns to better understand predictive indicators of risk. 
+                These extensions would offer a more comprehensive evaluation of AV safety and readiness for widespread deployment.
+
+            </p>
+        </div>
+    </div>
+    <hr>
 
     <hr>
     <h3><b><u>Conclusion</u></b></h3>
