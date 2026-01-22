@@ -2,13 +2,14 @@
 body {
     background-color: #d0cbc4;
     background-image: url(./images/gorgeous_brown_path.jpg);
+    background-size: cover;
 }
 
 #full-page {
     background-color: rgba(149,123,105, 0.8);
     padding: 5px 10px;
     padding-bottom: 80%;
-    width: 75%;
+    width: 80%;
     margin: auto;
     border-radius: 15px;
 }
