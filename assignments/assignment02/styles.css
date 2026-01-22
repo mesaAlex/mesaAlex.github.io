@@ -1,0 +1,110 @@
+/* Structure */
+body {
+    background-image: url(./images/road1.jpg);
+    background-size: cover;
+}
+#full-page {
+    background-color: rgba(11, 28, 45, 0.8);
+    width: 80%;
+    margin: auto;
+    padding: 1px 20px;
+    border-radius: 15px;
+}
+#buttons {
+    background-color: rgba(11, 28, 45, 0.8);
+    width: 10%;
+    margin: 10px 10px;
+    padding: 0.5px 3px;
+    padding-bottom: 5px;
+    border-radius: 15px;
+}
+#r8 {
+    background-color: rgba(11, 28, 45, 0.8);
+    width: 80%;
+    margin: 5px auto;
+    padding: 1px 20px;
+    border-radius: 15px;
+    display: block;
+    overflow: hidden;
+}
+#koenigsegg {
+    background-color: rgba(11, 28, 45, 0.8);
+    width: 80%;
+    margin: 5px auto;
+    padding: 1px 20px;
+    border-radius: 15px;
+    display: block;
+    overflow: hidden;
+}
+#koenigsegg_pic, #r8_pic {
+    width: 30%;
+    float: left;
+    margin: 10px 20px 10px 0px;
+    border-radius: 15px;
+    border: 2px solid #f4f1ec;
+    padding: 2px;
+}
+#conclusion {
+    background-color: rgba(11, 28, 45, 0.8);
+    width: 80%;
+    margin: 5px auto;
+    padding: 1px 20px;
+    border-radius: 15px;
+    display: block;
+    overflow: hidden;
+}
+
+/* Typography */
+#buttons {
+    font-family: Arial, sans-serif;
+    color: #f4f1ec;
+    text-align: center;
+}
+a  {
+    color: #f4f1ec;
+    text-decoration: none;
+}
+
+body {
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    color: #f4f1ec;
+}
+#r8 {
+    font-family: Arial, sans-serif;
+    color: #f4f1ec;
+}
+#koenigsegg {
+    font-family: Arial, sans-serif;
+    color: #f4f1ec;
+}
+.R8_RED {
+    color: #D2042D;
+}
+.G_GREEN {
+    color: #175616;
+}
+
+/* Tables */
+table, th, td {
+    border: 1px solid #f4f1ec;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+}
+#header_row {
+    background-color: rgba(184, 155, 94, 0.8);
+    font-weight: bold;
+}
+.car_model{
+    background-color: rgba(184, 155, 94, 0.3);
+}
+
+/* Navigation */
+#buttons:hover {
+  background-color: rgba(244, 241, 236, 0.8);
+}
+#buttons:hover a {
+  color: rgb(11, 28, 45);
+}
