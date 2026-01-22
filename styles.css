@@ -10,13 +10,27 @@ body {
     padding-bottom: 80%;
     width: 75%;
     margin: auto;
+    border-radius: 15px;
+}
+a {
+    text-decoration: none;
+    color: rgb(93, 49, 22);
+    font-weight: bold;
+    background-color: #957b69;
+    border-radius: 15px;
+    padding: 2px 5px;
 }
 /* Typography */
 body {
     font-family: 'Garamond', serif;
+    font-size: 20px;
+    color:#1c1914;
 }
 
 /* Tables */
 
 
 /* Navigation */
+a:hover {
+    color: #0b1c2d;
+}
