@@ -1,0 +1,75 @@
+/* Main Structure */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #8ba0a0;
+}
+#mainheader h1 {
+    text-align: center;
+    color: white;
+}
+
+/* Gallery */
+
+/* Navigation */
+#main-nav ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+#main-nav li {
+    background-color: #F3F4F4;
+    padding: 5px;
+    border-bottom: 1px solid black;
+}
+#main-nav a {
+    text-decoration: none;
+}
+#main-nav li:hover {
+    background-color: #D9E4E5;
+    border: 1px solid black;
+}
+
+/* Typography */
+
+/* Larger Screens */
+@media (min-width: 768px) { /* This overrides the mobile styles for larger devices */
+    .columns {
+        display: flex;
+    }
+
+    /* Flexbox children */
+    .one {
+        flex: 1; /* This splits the space equally among all flex items */
+    }
+    .two {
+        flex: 2;
+    }
+    .three {
+        flex: 3;
+    }
+    .four {
+        flex: 4;
+    }
+
+
+    #main-nav ul {
+        display: flex;
+        list-style: none;
+        padding-left: 0;
+    }
+    #main-nav li {
+        background-color: #F3F4F4;
+        padding: 5px;
+        border: 1px solid black;
+        display: flex;
+    }
+    #main-nav a {
+        margin: auto;
+        text-decoration: none;
+    }
+    #main-nav li:hover {
+        background-color: #D9E4E5;
+        border: 1px solid black;
+    }
+
+}
