@@ -10,33 +10,48 @@
 
 <body>
     <div id="full-page">
-        <h1>
-            Hello, CSCE242!
-        </h1>
-        <h2>Alexis Mesa Coria</h2>
+        <header id="mainheader">
+            <h1>
+                Hello, CSCE242!
+            </h1>
+            <h2>Alexis Mesa Coria</h2>
 
-        <p>
-            This course focuses on building modern websites using foundational web
-            technologies. We learn how to structure pages with HTML, style them with
-            CSS, and add interactivity using JavaScript. Assignments are published
-            through GitHub Pages and link is posted in blackboard. 
-        </p>
+            <p>
+                This course focuses on building modern websites using foundational web
+                technologies. We learn how to structure pages with HTML, style them with
+                CSS, and add interactivity using JavaScript. Assignments are published
+                through GitHub Pages and link is posted in blackboard. 
+            </p>
 
-        <p id="repo-link">
-            Code Repo:
-            <a href="https://github.com/mesaAlex/mesaAlex.github.io">GitHub</a>
-        </p>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="https://github.com/mesaAlex/mesaAlex.github.io">Github Repo</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        <h2>ASSIGNMENTS:</h2>
-
-        <ol>
-            <li>
-                <p class="List_Format"><a href="assignments/assignment01/index.html">Assignment 1 </a> | 01/18/2026</p>
-            </li>
-            <li>
-                <p class="List_Format"><a href="assignments/assignment02/index.html">Assignment 2</a> | 01/21/2026</p>
-            </li>
-        </ol>
+        <main id="content">
+            <h2>ASSIGNMENTS:</h2>
+            <hr>
+            <div id="gallery" class="columns">
+                <section id="assignment01_section" class="one">
+                    <h3><a href="assignments/assignment01/index.html">Assignment 1 | 01/18/2026</a></h3>
+                    <img src="images/Assignment01_pic.png" alt="Assignment 1 Screenshot" />
+                </section>
+                <section id="assignment02_section" class="one">
+                    <h3><a href="assignments/assignment02/index.html">Assignment 2 | 01/21/2026</a></h3>
+                    <img src="images/Assignment02_pic.png" alt="Assignment 2 Screenshot" />
+                </section>
+            </div>
+            <ol>
+                <li>
+                    <p class="List_Format"><a href="assignments/assignment01/index.html">Assignment 1 </a> | 01/18/2026</p>
+                </li>
+                <li>
+                    <p class="List_Format"><a href="assignments/assignment02/index.html">Assignment 2</a> | 01/21/2026</p>
+                </li>
+            </ol>
+        </main>
     </div>
 </body>
 </html>

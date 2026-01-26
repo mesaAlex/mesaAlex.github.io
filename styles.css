@@ -24,6 +24,29 @@ a {
 li {
     margin-bottom: 10px;
 }
+
+#assignment01_section, #assignment02_section {
+    border-radius: 30px;
+    justify-content: center; 
+    align-items: flex-end;
+}
+#assignment01_section img {
+    width: 50%;
+}
+#assignment02_section img {
+    width: 60%;
+}
+
+/* Gallery */
+#gallery section {
+    background: #957b69;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+}
+#gallery section h3 {
+    text-align: center;
+}
 /* Typography */
 body {
     font-family: 'Garamond', serif;
@@ -40,6 +63,54 @@ body {
 
 
 /* Navigation */
-a:hover {
-    color: #0b1c2d;
+#main-nav ul {
+    padding-left: 0;
+}
+
+#main-nav li {
+    list-style-type: none;
+    padding: 5px;
+}
+
+#main-nav a {
+    text-decoration: none;
+}
+
+/* Larger devices */
+@media (min-width: 768px) { /* This overrides the mobile styles for larger devices */
+    .columns {
+        display: flex;
+    }
+
+    /* Flexbox children */
+    .one {
+        flex: 1; /* This splits the space equally among all flex items */
+    }
+    .two {
+        flex: 2;
+    }
+    .three {
+        flex: 3;
+    }
+    .four {
+        flex: 4;
+    }
+
+
+    #main-nav ul {
+        display: flex;
+    }
+    
+    #main-nav li {
+        background: transparent;
+    }
+    
+    #main-nav a {
+        color: #F3F4F4;
+    }
+    #main-nav a:hover {
+        color: black;
+        border-bottom: 2px solid black;
+    }
+
 }
