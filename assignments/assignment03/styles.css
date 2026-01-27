@@ -22,9 +22,10 @@ body {
     background-color: #f5f5f0;
     margin-bottom: 10px;
 }
-/* update this */
-#even {
-    background-color: #4e3102;
+
+/* Had to make more specific */
+#secondContent section#even {
+    background-color: antiquewhite;
 }
 #secondContent img {
     display: block;
@@ -64,13 +65,14 @@ body {
     padding: 0px;
 }
 #gallery h3 {
+    display: block;
     text-align: center;
     margin:0px;
     padding: 10px;
-    background-color: #0a0a0a;
+    background-color: antiquewhite;
 }
 #gallery img {
-    display:block;
+    display: block;
     margin: auto;
     margin-bottom: 10px;
 }
@@ -146,7 +148,7 @@ body {
         text-align: center;
         margin:0px;
         padding: 5px;
-        background-color: aqua;
+        background-color: antiquewhite;
     }
     #gallery img {
         display:block;

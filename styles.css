@@ -17,24 +17,25 @@ li {
     margin-bottom: 10px;
 }
 
-#assignment01_section, #assignment02_section {
-    border-radius: 30px;
+#content section {
+    border-radius: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
 
 }
-#assignment01_section img, #assignment02_section img {
-    width: 90%;
+#content section img {
+    width: 80%;
     display: block;
     justify-content: center;
     border-radius: 15px;
     padding: 1px;
     border: #1c1914 1px solid;
     margin: 5px;
+    max-width: 500px;
 }
 
-#assignment01_section a, #assignment02_section a {
+#content section a {
     display: block;
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -44,13 +45,13 @@ li {
     margin: 5px;
 }
 
-#assignment01_section p, #assignment02_section p {
+#content section p {
     display:block;
     font-size: 15px;
     margin: 10px;
 }
 
-#assignment01_section a:hover, #assignment02_section a:hover {
+#content section a:hover {
     background-color: #1c1914;
     color: white;
 }
@@ -128,7 +129,7 @@ body {
         flex: 4;
     }
 
-
+    /* Navigation */
     #main-nav ul {
         display: flex;
     }
@@ -144,5 +145,8 @@ body {
         color: black;
         border-bottom: 2px solid black;
     }
+
+    /* Main Strcuture */
+    
 
 }

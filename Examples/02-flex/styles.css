@@ -1,24 +1,24 @@
 /* Main Structure */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #F3F4F4;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#bde0fe;
 }
 
 #main-content {
-    background-color: #5F9598;
-    width: 80%;
-    margin: auto;
-    padding: 0; /* Top/Bottom | Left/Right */
+    width:80%;
+    margin:auto;    /* Center */
 }
 
 #main-header {
-    background-color: #1D546D;
-    margin: auto;
-    padding: 0; /* Top/Bottom | Left/Right */
+    background:#ffafcc;
 }
 
 #content {
 
+}
+
+#sidebar {
+    background:lightcoral;
 }
 
 #main-footer {
@@ -27,81 +27,139 @@ body {
 
 /* Gallery */
 #gallery section {
-    background: #1D546D;
-    padding: 5px;
-    border-radius: 5px;
-    margin: 5px;
+    background:lightgray;
+    padding:5px;
+    border-radius:5px;
+    margin:5px;
 }
 
 #gallery section h3 {
-    text-align: center;
+    text-align:center;
+}
+
+/* List */
+.item {
+    margin:5px;
+    background:#cdb4db;
+}
+.item img {
+    display:block;
+    margin:auto;
+}
+
+/* Area */
+.area {
+    /* dont need height if we have content */
+    background: #cbd4db;
+}
+.arrow {
+    font-size:1.5em;
+    color:white;
+    position: absolute;
+    top: 32%;
+}
+
+#prev {
+    left: 5%;
+}
+
+#next {
+    right: 5%;
 }
 
 /* Navigation */
 #main-nav ul {
-    padding-left: 0; /* Removes the default padding on the ul */
+    padding-left:0;     /* Remove indentation */
 }
 
-#main-nav li { /* This calles the list items inside the nav */
-    list-style-type: none; /* Removes the bullets */
-    background-color: #F3F4F4;
-    padding: 5px;
-    border-bottom: 1px solid black;
+#main-nav li {
+    list-style-type:none;   /* Remove bullet */
+    background:#ffc8dd;
+    padding:5px;
+    border-bottom:1px solid #cdb4db;;
 }
 
 #main-nav a {
-    text-decoration: none; /* Removes the underline from links */
+    text-decoration: none;  /* Remove underline */
+}
+/* Images */
+img {
+    max-width: 100;
+}
+
+/* Square */
+.area {
+    position: relative;
+}
+
+#square {
+    width: 100px;
+    height: 100px;
+    background: lightsalmon;
+
+    /* Position absolute is in respect to the upper left hand corner */
+    position: absolute;
+    top: 50px;
+    left: 50px;
 }
 
 /* Typography */
 #main-header h1 {
     text-align: center;
-    padding: 20px 0px;
+    padding-top:10px;
 }
 
 /* Larger devices */
-@media (min-width: 768px) { /* This overrides the mobile styles for larger devices */
+@media (min-width: 768px) {
+    #content {
+        justify-content: space-between;
+        gap: 1em;
+    }
+
     .columns {
-        display: flex;
+        display:flex;
     }
 
-    /* Flexbox children */
     .one {
-        flex: 1; /* This splits the space equally among all flex items */
-    }
-    .two {
-        flex: 2;
-    }
-    .three {
-        flex: 3;
-    }
-    .four {
-        flex: 4;
+        flex:1;
     }
 
+    .two {
+        flex:2;
+    }
+
+    .three {
+        flex:3;
+    }
+
+    .four {
+        flex:4;
+    }
 
     #main-nav ul {
-        display: flex;
+        display:flex;
     }
-    
+
     #main-nav li {
-        background: transparent;
+        background:transparent;
+        flex:1;
     }
-    
+
     #main-nav a {
-        color: #F3F4F4;
+        color: darkslateblue;
+        border-bottom:1px solid transparent;
     }
+
     #main-nav a:hover {
-        color: black;
-        border-bottom: 2px solid black;
+        border-bottom:1px solid darkslateblue;
+    }
+
+    .item img {
+        flex:1;
+    }
+
+    .item div {
+        flex:5;
     }
 
 }
-
-/* 
-Notes:
-1.) YOU ALWAYS DESIGN FOR MOBILE FIRST
-2.) images are not block elements by default, so you need to set a div around them to use flexbox
-3.) 
-
-*/
