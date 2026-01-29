@@ -61,6 +61,12 @@ li {
 }
 
 /* Gallery */
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
 #gallery section {
     background: rgba(177,164,141, 0.5);
     padding: 5px;

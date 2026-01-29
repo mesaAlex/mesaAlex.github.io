@@ -1,0 +1,144 @@
+/* Main Structure */
+body {
+    background-color: black;
+    margin: 0; /* Gets the page to fit better on the sides */
+    padding:0;
+}
+#main-header {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+#image_name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin:0;
+}
+#image_name img {
+    max-width: 300px;
+    width: 100%;
+    padding-left: 30px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+#image_name h1 {
+    padding-right: 30px;
+    margin: 0;
+}
+
+/* Typography */
+#main-header h1{
+    color:white;
+    font-size: 40px
+}
+#main-nav a {
+    font-size: 10px;
+}
+#second-nav a {
+    
+}
+
+/* content stcture */
+#content {
+    margin:0;
+}
+#content img {
+    width: 100%;
+}
+
+
+/* Navigation */
+#main-nav {
+    margin: 0px;
+}
+#main-nav ul {
+    padding-left: 25px;
+    padding-top: 0px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+#main-nav li {
+    display: block;
+}
+#main-nav li:not(:last-child)::after {
+    content: "|";
+    padding-left: 10px;
+    padding-right: 10px;
+    color:white;
+}
+
+#main-nav a {
+    padding: 0px;
+    font-family: "Berlingske Sans", sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+#second-nav {
+    margin: 0;
+}
+#second-nav ul{
+    padding: 5px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    background-color: #73000a;
+    justify-content: flex-end;
+}
+#second-nav li {
+    display:block;
+    padding: 20px;
+}
+#second-nav a {
+    padding: 0px;
+    font-family: "Berlingske Sans", sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Larger devices */
+@media (min-width: 768px) { /* This overrides the mobile styles for larger devices */
+    .columns {
+        display: flex;
+    }
+
+    /* Flexbox children */
+    .one {
+        flex: 1; /* This splits the space equally among all flex items */
+    }
+    .two {
+        flex: 2;
+    }
+    .three {
+        flex: 3;
+    }
+    .four {
+        flex: 4;
+    }
+
+    /* Navigation */
+    #main-nav ul {
+        display: flex;
+    }
+    
+    #main-nav li {
+        background: transparent;
+    }
+    
+    #main-nav a {
+        color: #F3F4F4;
+    }
+    #main-nav a:hover {
+        color: black;
+        border-bottom: 2px solid black;
+    }
+
+    /* Main Strcuture */
+    
+
+}
