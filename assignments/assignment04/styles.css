@@ -14,19 +14,16 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin:0;
+    margin:10px;
 }
 #image_name img {
     max-width: 300px;
     width: 100%;
-    padding-left: 30px;
+    padding-left: 20px;
     padding-top: 0px;
     padding-bottom: 0px;
 }
-#image_name h1 {
-    padding-right: 30px;
-    margin: 0;
-}
+
 
 /* Typography */
 #main-header h1{
@@ -36,17 +33,106 @@ body {
 #main-nav a {
     font-size: 10px;
 }
-#second-nav a {
-    
+#image_name h1 {
+    padding-right: 30px;
+}
+#second-nav a:hover {
+    background-color:#650009;
+}
+#content h2 {
+    background-color: white;
+    color: black;
+    margin: auto;
+    padding: 50px;
+    text-align: left;
+    font-size: 25px;
+    max-width: 800px;
+    min-width: 100px;
+}
+#EDUCATION-TEXT h1 {
+    margin: 0;
+}
+#EDUCATION-TEXT p {
+    margin-top: 12px;
+    margin-bottom: 24px
 }
 
 /* content stcture */
 #content {
     margin:0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
 }
 #content img {
     width: 100%;
 }
+#EDUCATION-TEXT {
+    background-color: #75000A;
+    color: white;
+    min-width: 54px;
+    max-width: 666px;
+    margin: 0px 16px;
+    padding: 32px;
+    position: relative;
+    bottom:45px;
+    align-self: flex-end;
+}
+#OUR-PROGRAMS {
+    border: 3px white solid;
+    display: flex;
+    max-width: fit-content;
+}
+#OUR-PROGRAMS h2{
+    background-color:black;
+    color:white;
+    padding:12px 24px;
+    font-size: 15px;
+}
+#OUR-PROGRAMS h2:hover{
+    background-color:white;
+    color:#650009;
+    border: none;
+}
+
+#lady-text{
+    display: flex;
+    flex-direction: column;
+}
+#lady-text div {
+    position: relative;
+}
+#lady-text div h3 {
+    color:#650009;
+    margin: 1em 48px;
+    font-size: 25px;
+}
+#lady-text div p {
+    margin: 0px 3em;
+}
+#lady-text div img {
+    opacity:0.3;
+    width: 80px;
+}
+#left-quote{
+    position: absolute;
+    transform: rotate(180deg);
+    top: -20px;
+    left:2em;
+}
+#right-quote{
+    position: absolute;
+    bottom: 1em;
+    right:2em;
+}
+
+.circle {
+    border-radius: 50%;
+    margin: 0px 16px;
+    max-width: 350px;
+    align-self: center;
+}
+
 
 
 /* Navigation */
@@ -55,10 +141,11 @@ body {
 }
 #main-nav ul {
     padding-left: 25px;
-    padding-top: 0px;
+    padding-top: 5px;
     list-style: none;
     display: flex;
     flex-direction: row;
+    margin:0;
 }
 
 #main-nav li {
@@ -82,16 +169,20 @@ body {
     margin: 0;
 }
 #second-nav ul{
-    padding: 5px;
+    padding: 0px;
     list-style: none;
     display: flex;
     flex-direction: row;
     background-color: #73000a;
     justify-content: flex-end;
+    margin:0;
 }
 #second-nav li {
     display:block;
     padding: 20px;
+}
+#second-nav li:hover {
+    background-color:#650009;
 }
 #second-nav a {
     padding: 0px;
