@@ -326,7 +326,7 @@ hr {
     padding-left: 25px;
     padding-top: 5px;
     list-style: none;
-    display: none;
+    display: flex;
     flex-direction: row;
     margin: 0;
 }
@@ -509,6 +509,7 @@ hr {
 }
 #final-nav ul{
     display: flex;
+    flex-wrap:wrap;
 }
 #final-nav ul a{
     color: white;
