@@ -68,6 +68,7 @@ hr {
 .SUB-TEXT p {
     margin-top: 12px;
     margin-bottom: 24px;
+    line-height: 1.8;
 }
 
 #content h2 {
@@ -78,12 +79,18 @@ hr {
     font-size: 25px;
     max-width: 800px;
     min-width: 100px;
+    line-height: 1.8;
 }
 .location-text {
     text-align: center;
 }
 .location-text a {
     color:#650009;
+    margin-bottom:0;
+}
+.location-text a:hover {
+    background-color:#dc5a65;
+    color:white;
     margin-bottom:0;
 }
 .location-text p {
@@ -130,14 +137,18 @@ hr {
 }
 
 #content .SUB-BUTTON h2 {
-        background-color: black;
-        border: 3px solid white;
-        color: white;
-        padding: 12px 24px;
-        font-size: 15px;
+    background-color: black;
+    border: 3px solid white;
+    color: white;
+    padding: 12px 24px;
+    font-size: 15px;
+}
+#content .SUB-BUTTON h2 a {
+    color: white;
+    text-decoration: none;
 }
 
-#content .SUB-BUTTON h2:hover {
+#content .SUB-BUTTON h2:hover, #content .SUB-BUTTON a:hover{
     background-color: white;
     color: #650009;
     border: none;
@@ -158,6 +169,7 @@ hr {
     color: #650009;
     margin: 1em 48px;
     font-size: 25px;
+    line-height: 1.8;
 }
 
 #lady-text div p {
@@ -210,8 +222,12 @@ hr {
     margin-bottom: 2em;
 }
 
-.stay-connected h3 {
+.stay-connected h3 a {
     color: #650009;
+}
+.stay-connected h3 a:hover {
+    background-color: #dc5a65;
+    color:white;
 }
 #column-row section h3{
     text-align: center;
@@ -311,7 +327,7 @@ hr {
 
 #gallery section p {
     word-spacing: 2px;
-    line-height: 1.5;
+    line-height: 1.8;
     font-size: larger;
 }
 
@@ -505,15 +521,18 @@ hr {
 
 /* Footer of the Footer */
 #final-footer {
+    border-top:white 2px solid;
     background-color: black;
 }
 #final-nav ul{
     display: flex;
     flex-wrap:wrap;
+    padding: 2em auto;
 }
 #final-nav ul a{
     color: white;
     text-decoration: none;
+    line-height: 1.8
 }
 #final-nav ul a:hover{
     background-color:#dc5a65;
