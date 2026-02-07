@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flex Demo</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Assignment 7</h1>
+        <h3>Introduction to Javascript</h3>
+        
+        <div id="gallery">
+            <section id="triangle-container" class="one">
+                <h3>Geometry</h3>
+                <div id="triangle-up">
+                    <!--Triangle will appear here-->
+                </div>
+            </section>
+            <section class="one">
+                <h3>Select A Date:</h3>
+                <div id="date-container">
+                    <label for="party">Choose your preferred party date:</label>
+                    <input 
+                        type="date" 
+                        id="party" 
+                        name="party-date" 
+                        value="yyyy-mm-dd" 
+                        min="2025-01-01" 
+                        max="2026-12-31" />
+                    
+                    <p id="display-date" style="display:none;">You picked the date: <strong id="date_area">ERROR</strong></p>
+                </div>
+
+            </section>
+            <section class="one">
+                <h3>Frame Image</h3>
+                <img id="gato" class="img-style" src="./images/gato.png"/>
+            </section>
+        </div>
+
+        <!-- Javascript should be loaded at the end because it helps run better -->
+        <script src="./script.js"></script>
+    </body>
+</html>
