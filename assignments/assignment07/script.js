@@ -15,7 +15,15 @@ date_picker.addEventListener('change', function() {
     const selected_date = date_picker.value;
 
     if(selected_date) {
-        date_area.textContent = selected_date;
+        const parts = selected_date.split('-'); 
+        const year = parts[0];
+        const month = parts[1];
+        const day = parts[2];
+
+        // Reformated to MM/DD/YYYY
+        const formatted_date = `${month}/${day}/${year}`;
+
+        date_area.textContent = formatted_date;
         toggle_date_visible.style.display = "block";
     } else {
         date_area.textContent = 'None Selected';
