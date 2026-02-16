@@ -1,27 +1,82 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Javascript Conditionals</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <header id="main-header">
-            <h1>Assignment 8</h1>
-            <h2>If Statements</h2>
-        </header>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Assignment 8 - If Statements</title>
+	<link rel="stylesheet" href="styles.css" />
+</head>
 
-        <main id="main-content">
-            <section id="exercise-section">
-                <ul>
-                    <li><div id="triangle-div disable"></div></li>
-                    <li><button>Exercise 1</button></li>
-                    <li><button>Exercise 2</button></li>
-                </ul>
-            </section>
-        </main>
+<body>
+	<!-- PAGE LAYER -->
+	<div class="page">
 
-        <footer id="main-footer">
+		<!-- HEADER LAYER -->
+		<header class="header" id="main-header">
+			<div class="header__inner">
+				<h1 class="header__title">Assignment 8</h1>
+				<h2 class="header__subtitle">If Statements</h2>
+			</div>
+		</header>
 
-        </footer>
-    </body>
+		<nav class="nav" aria-label="Exercises">
+			<div class="nav__inner">
+				<button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navList">
+					<span class="nav__arrow" id="navArrow" aria-hidden="true">▼</span>
+					<span class="nav__toggleText">Menu</span>
+				</button>
+
+				<ul class="nav__list is-collapsed" id="navList">
+					<li class="nav__item"><button class="nav__btn" id="btnEx1" type="button">Exercise 1</button></li>
+					<li class="nav__item"><button class="nav__btn" id="btnEx2" type="button">Exercise 2</button></li>
+				</ul>
+			</div>
+		</nav>
+
+		<main class="main" id="main-content">
+			<div class="main__inner">
+
+				<section class="panel" aria-live="polite">
+					<div class="panel__inner">
+
+						<section class="exercise" id="exercise1">
+							<h3 class="exercise__title">How many minutes until class?</h3>
+
+							<div class="formRow">
+								<input
+									class="slider"
+									id="minutesSlider"
+									type="range"
+									min="0"
+									max="60"
+									value="30"
+								/>
+							</div>
+
+							<p class="valueText">
+								<span id="minutesValue">30</span> minutes
+							</p>
+
+							<p class="message" id="ex1Message"></p>
+						</section>
+
+						<section class="exercise is-hidden" id="exercise2">
+							<h3 class="exercise__title">Countdown till class</h3>
+							<p class="message" id="ex2Message">Click Exercise 2 to see the countdown.</p>
+						</section>
+
+					</div>
+				</section>
+
+			</div>
+		</main>
+
+		<footer class="footer" id="main-footer">
+			<p class="footer__text">@portiaplante.com</p>
+		</footer>
+
+	</div>
+
+	<script src="script.js"></script>
+</body>
 </html>
