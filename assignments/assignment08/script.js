@@ -1,8 +1,8 @@
-// ===== Helpers =====
+// Helpers 
 function show(el) { el.classList.remove("is-hidden"); }
 function hide(el) { el.classList.add("is-hidden"); }
 
-// ===== Elements =====
+// Elements 
 const navToggle = document.getElementById("navToggle");
 const navList = document.getElementById("navList");
 const navArrow = document.getElementById("navArrow");
@@ -18,7 +18,7 @@ const minutesValue = document.getElementById("minutesValue");
 const ex1Message = document.getElementById("ex1Message");
 const ex2Message = document.getElementById("ex2Message");
 
-// ===== Menu toggle (small screens) =====
+// This is the toggle for the small screens
 function setMenuExpanded(isExpanded) {
 	navToggle.setAttribute("aria-expanded", String(isExpanded));
 	navList.classList.toggle("is-collapsed", !isExpanded);
@@ -33,7 +33,7 @@ navToggle.addEventListener("click", () => {
 // start collapsed on small screens (CSS hides anyway, but keep ARIA consistent)
 setMenuExpanded(false);
 
-// ===== Exercise switching =====
+// Exercise switching
 function openExercise1() {
 	show(exercise1);
 	hide(exercise2);
@@ -49,7 +49,7 @@ function openExercise2() {
 btnEx1.addEventListener("click", openExercise1);
 btnEx2.addEventListener("click", openExercise2);
 
-// ===== Exercise 1 logic =====
+// Exercise 1
 function updateExercise1Message() {
 	const mins = Number(minutesSlider.value);
 	minutesValue.textContent = String(mins);
@@ -73,20 +73,20 @@ function updateExercise1Message() {
 minutesSlider.addEventListener("input", updateExercise1Message);
 updateExercise1Message(); // initialize
 
-// ===== Exercise 2 logic (Countdown till class at 8:30am-9:45am Tue/Thu) =====
+// Exercise 2
 function updateExercise2Message() {
 	const now = new Date();
-	const dayOfWeek = now.getDay(); // 0 = Sunday, 2 = Tuesday, 4 = Thursday
+	const dayOfWeek = now.getDay();
 
 	// Check if it's Tuesday (2) or Thursday (4)
 	const isTueThu = dayOfWeek === 2 || dayOfWeek === 4;
 
 	if (!isTueThu) {
-		ex2Message.textContent = "📅 No class today (class is Tuesday & Thursday 8:30am-9:45am).";
+		ex2Message.textContent = "No class today (class is Tuesday & Thursday 8:30am-9:45am).";
 		return;
 	}
 
-	// class start time: 8:30am local time
+	// class start time: 8:30am
 	const classStart = new Date(
 		now.getFullYear(),
 		now.getMonth(),
@@ -94,7 +94,7 @@ function updateExercise2Message() {
 		8, 30, 0, 0
 	);
 
-	// class end time: 9:45am local time
+	// class end time: 9:45am
 	const classEnd = new Date(
 		now.getFullYear(),
 		now.getMonth(),
@@ -104,40 +104,34 @@ function updateExercise2Message() {
 
 	// minutes until class start: positive means still time left
 	const diffMsStart = classStart - now;
-	const diffMinStart = Math.round(diffMsStart / 60000); // rounded minutes
+	const diffMinStart = Math.round(diffMsStart / 60000);
 
 	let msg = "";
 
-	// PDF ranges:
-	// More than 15
-	// Between 10 and 15
-	// Between 5 and 10
-	// Between 0 and 5
-	// Class started up to 5 minutes ago
-	// Class started up to 15 minutes ago
-	// Class started more than 15 minutes ago
 	if (diffMinStart > 15) {
-		msg = `🗓️ You have ${diffMinStart} minutes. You're early — respect.`;
+		msg = `You have ${diffMinStart} minutes. Plenty of time — maybe finish that snack.`;
 	} else if (diffMinStart >= 10) {
-		msg = `🎒 ${diffMinStart} minutes left. Start wrapping up what you're doing.`;
+		msg = `${diffMinStart} minutes left. Tidy up and roll out soon.`;
 	} else if (diffMinStart >= 5) {
-		msg = `🚶 ${diffMinStart} minutes left. Head out now.`;
+		msg = `${diffMinStart} minutes left. Time to hustle — shoes on!`;
 	} else if (diffMinStart >= 0) {
-		msg = `🏃 ${diffMinStart} minutes left. It's basically go-time.`;
-	} else if (now < classEnd) {
-		// class is in session
-		const minutesIntClass = Math.round((classEnd - now) / 60000);
-		msg = `📚 Class in session (${minutesIntClass} minutes remaining).`;
+		msg = `${diffMinStart} minutes left. It's basically go-time.`;
 	} else {
-		// class already ended
-		const minutesAfterEnd = Math.round((now - classEnd) / 60000);
-
-		if (minutesAfterEnd <= 5) {
-			msg = `✅ Class ended ${minutesAfterEnd} minutes ago. Great job!`;
-		} else if (minutesAfterEnd <= 15) {
-			msg = `⏰ Class ended ${minutesAfterEnd} minutes ago.`;
+		// diffMinStart < 0: class has started (might still be in session or already ended)
+		const minutesSinceStart = Math.round((now - classStart) / 60000);
+		if (now < classEnd) {
+			// class is currently in session
+			if (minutesSinceStart <= 5) {
+				msg = `Class started ${minutesSinceStart} minutes ago. You're barely late — sneak in!`;
+			} else if (minutesSinceStart <= 15) {
+				msg = `Class started ${minutesSinceStart} minutes ago. Hop in — you haven't missed much!`;
+			} else {
+				msg = `Class started ${minutesSinceStart} minutes ago. You're pretty late, but join the fun.`;
+			}
 		} else {
-			msg = `👋 Class ended ${minutesAfterEnd} minutes ago.`;
+			// class already ended — show missed-class message with minutes passed
+			const minutesAfterEnd = Math.round((now - classEnd) / 60000);
+			msg = `You missed class :( It ended ${minutesAfterEnd} minutes ago.`;
 		}
 	}
 
@@ -149,11 +143,11 @@ let ex2Interval = null;
 function startEx2Timer() {
 	if (ex2Interval) clearInterval(ex2Interval);
 	updateExercise2Message();
-	ex2Interval = setInterval(updateExercise2Message, 15000); // update every 15s
+	ex2Interval = setInterval(updateExercise2Message, 15000);
 }
 
 btnEx2.addEventListener("click", startEx2Timer);
 
-// default view: exercise 1 visible, exercise 2 hidden
+// This initializes the page with Exercise 1 open
 openExercise1();
  

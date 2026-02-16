@@ -1,4 +1,4 @@
-/* ===== Base ===== */
+/* Base */
 * { box-sizing: border-box; }
 body {
 	margin: 0;
@@ -13,7 +13,7 @@ body {
 	flex-direction: column;
 }
 
-/* ===== Header ===== */
+/* Header */
 .header {
 	background: #dcd3c2;
 	padding: 22px 16px 10px;
@@ -31,7 +31,7 @@ body {
 	color: #b15d5d;
 }
 
-/* ===== Nav ===== */
+/* Nav */
 .nav {
 	background: #dcd3c2;
 	padding: 0 16px 14px;
@@ -43,7 +43,7 @@ body {
 
 /* Toggle only matters on small screens */
 .nav__toggle {
-	display: none; /* shown via media query */
+	display: none;
 	width: 100%;
 	background: transparent;
 	border: none;
@@ -65,10 +65,12 @@ body {
 	margin: 8px 0 0;
 	display: flex;
 	justify-content: center;
-	gap: 0; /* pipes handle separation on large */
+	gap: 0;
 }
 
-.nav__item { margin: 0; }
+.nav__item { 
+	margin: 0; 
+}
 
 /* buttons look like plain text links */
 .nav__btn {
@@ -81,30 +83,46 @@ body {
 }
 .nav__btn:hover { text-decoration: underline; }
 
-/* Add the pipe separators on large screens (not after last item) */
+/* Separator element: hidden by default and shown on large screens as its own, non-clickable item */
+.nav__sep {
+	display: none;
+	user-select: none;
+	pointer-events: none;
+}
+
 @media (min-width: 700px) {
-	.nav__item:not(:last-child) .nav__btn::after {
-		content: "|";
-		margin-left: 12px;
+	.nav__sep {
+		display: inline-flex;
+		align-items: center;
+		padding: 0 12px;
 		color: #2e6f73;
+	}
+
+	/* ensure buttons don't render pipes via pseudo-elements */
+	.nav__btn::after { 
+		content: none; 
 	}
 }
 
-/* Small screen: vertical menu with toggle arrow */
+/* Small screen */
 @media (max-width: 699px) {
-	.nav__toggle { display: inline-flex; align-items: center; gap: 6px; }
+	.nav__toggle { 
+		display: inline-flex; align-items: center; gap: 6px; 
+	}
 	.nav__list {
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 6px;
 		margin-top: 6px;
 	}
-	.nav__btn { padding: 6px 0; }
+	.nav__btn { 
+		padding: 6px 0; 
+	}
 
 	.nav__list.is-collapsed { display: none; }
 }
 
-/* ===== Main Panel ===== */
+/* Main Panel */
 .main {
 	flex: 1;
 	padding: 18px 16px;
@@ -156,7 +174,7 @@ body {
 
 .is-hidden { display: none; }
 
-/* ===== Footer ===== */
+/* Footer */
 .footer {
 	text-align: center;
 	padding: 14px 16px 20px;
