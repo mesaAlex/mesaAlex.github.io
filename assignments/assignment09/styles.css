@@ -1,0 +1,204 @@
+:root {
+    --orange: #EF8A1F;
+    --orange-light: #FFB634;
+    --grey: #EDEDED;
+    --blue: #92d6e9;
+    --dark: #3b2f2a;
+}
+
+h1{
+    font-size: 50px;
+    color: var(--grey);
+    text-align:center;
+}
+h2 {
+    color: var(--grey);
+    text-align:center;
+}
+
+body {
+    background-color: var(--dark);
+}
+
+/* Fish bowl CSS Art */
+#bowl {
+    position: absolute;
+    bottom: 5vmin;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70vmin;
+    height: 60vmin;
+    border: 2vmin solid var(--grey);
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 1;
+}
+#lid {
+    position: absolute;
+    bottom: 60vmin;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45vmin;
+    height: 10vmin;
+    border: 2vmin solid var(--grey);
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    background-color: var(--grey);
+    z-index: 10;
+}
+
+/* bubble section */
+#water {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background: linear-gradient(0deg,rgba(42, 151, 155, 1) 45%, rgb(129, 208, 208) 70%, rgba(42, 151, 155, 1) 90%);
+    overflow:hidden;
+}
+.bubble {
+    position: absolute;
+    bottom: 50px;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle at center, #e3e3e3, #40bede);
+    border-radius: 50%;
+    opacity: 0;
+    animation: moveUpAndLoop linear infinite;
+    pointer-events: none;
+}
+@keyframes moveUpAndLoop {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.7;
+    }
+    95% {
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-550px);
+        opacity: 0;
+    }
+}
+
+/* FISH */
+.fish {
+  position: absolute;
+  top: 28vmin;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 25vmin;
+  height: 15vmin;
+}
+
+.body {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20vmin;
+  height: 10vmin;
+  background: var(--orange-light);
+  border-radius: 40% 50% 50% 40%;
+}
+
+.mouth {
+  position: absolute;
+  bottom: 3vmin;
+  left: -1vmin;
+  width: 2vmin;
+  height: 2vmin;
+  background: rgba(42, 151, 155, 1);
+  border-radius: 50%;
+}
+
+/* Eye */
+.body::before {
+  content: '';
+  position: absolute;
+  width: 2vmin;
+  height: 2vmin;
+  background: black;
+  border-radius: 50%;
+  border: 1vmin solid white;
+  left: 2vmin;
+  top: 1vmin;
+}
+
+/* Eye highlight */
+.body::after {
+  content: '';
+  position: absolute;
+  height: 1vmin;
+  width: 1vmin;
+  background: white;
+  border-radius: 50%;
+  left: 4vmin;
+  top: 2vmin;
+}
+
+.side-fin {
+  position: absolute;
+  width: 4vmin;
+  height: 2vmin;
+  background: var(--orange);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  border-radius: 0% 100% 18% 82% / 11% 20% 80% 89%  ;
+}
+
+.fin {
+  width: 10vmin;
+  height: 6vmin;
+  position: absolute;
+  background: var(--orange);
+  border-radius: 50%;
+}
+
+.fin.top {
+  transform: rotate(-20deg);
+  left: 6vmin;
+  border-radius: 50% 50% 0% 0%;
+}
+
+.fin.bottom {
+  transform: rotate(20deg);
+  bottom: 1vmin;
+  left: 5.5vmin;
+  border-radius: 50% 0% 50% 50%;
+}
+
+.tail {
+  width: 8vmin;
+  height: 15vmin;
+  position: absolute;
+  right: 0;
+}
+
+.tail::before {
+  content: '';
+  position: absolute;
+  width: 8vmin;
+  height: 5vmin;
+  border-radius: 50%;
+  background: var(--orange);
+  transform: rotate(-30deg);
+  top: 2.5vmin;
+  left: 0vmin;
+}
+
+.tail::after {
+  content: '';
+  position: absolute;
+  width: 8vmin;
+  height: 5vmin;
+  border-radius: 50%;
+  background: var(--orange);
+  transform: rotate(30deg);
+  bottom: 2.5vmin;
+  left: 0vmin;
+}

@@ -79,12 +79,12 @@ setInterval(()=>{
 /* Donations */
 document.getElementById("btn-display-donation").onclick = () => {
     const errorP = document.getElementById("p-donation-error");
-    errorP.innerHTML = " ";
+    errorP.innerHTML = "";  //if you click the button twice
 
     const donationText = document.getElementById("txt-donation").value;
 
     if(isNaN(donationText) || donationText < 0){
-        errorP.innerHTML="* Invalid AMT";
+        errorP.innerHTML = "* Invalid amount";
         return;
     }
 
