@@ -16,11 +16,34 @@ h2 {
     text-align:center;
 }
 
+#main-footer {
+    background-color: var(--dark);
+    padding: 1vmin;
+    text-align: center;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     background-color: var(--dark);
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; 
 }
 
 /* Fish bowl CSS Art */
+#FISH_BOWL {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
 #bowl {
     position: absolute;
     bottom: 5vmin;
@@ -28,34 +51,73 @@ body {
     transform: translateX(-50%);
     width: 70vmin;
     height: 60vmin;
-    border: 2vmin solid var(--grey);
+    border: 1vmin solid var(--grey);
     border-radius: 50%;
     overflow: hidden;
     z-index: 1;
+    background: linear-gradient(145deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.1) 60%, rgba(255,255,255,0.05) 100%);
+    box-shadow: inset 0 0 2vmin rgba(255,255,255,0.6),
+                inset 0 0 0.5vmin rgba(255,255,255,0.8),
+                0 0 2vmin rgba(0,0,0,0.2);
+    backdrop-filter: blur(3px);
 }
+
+/* highlight streaks */
+#bowl::before,
+#bowl::after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+}
+#bowl::before {
+    top: 10%;
+    left: 5%;
+    width: 10%;
+    height: 60%;
+    background: rgba(255,255,255,0.35);
+    transform: skew(-30deg);
+}
+#bowl::after {
+    bottom: 15%;
+    right: 10%;
+    width: 8%;
+    height: 40%;
+    background: rgba(255,255,255,0.25);
+    transform: skew(15deg);
+}
+
 #lid {
     position: absolute;
-    bottom: 60vmin;
+    bottom: 59vmin;
     left: 50%;
     transform: translateX(-50%);
     width: 45vmin;
     height: 10vmin;
-    border: 2vmin solid var(--grey);
+    border: 1vmin solid var(--grey);
+    border-bottom: none;
     border-radius: 10px 10px 0 0;
     overflow: hidden;
-    background-color: var(--grey);
     z-index: 10;
+    /* improved glass lid */
+    background: linear-gradient(145deg, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.15) 60%, rgba(255,255,255,0.08) 100%);
+    box-shadow: inset 0 0 1.5vmin rgba(255,255,255,0.6),
+                inset 0 -0.5vmin 0.7vmin rgba(0,0,0,0.15),
+                0 0 1vmin rgba(0,0,0,0.2);
+    backdrop-filter: blur(100px);
 }
 
 /* bubble section */
 #water {
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
-    height: 90%;
+    border-radius: 50%;
+    height: 100%;
     background: linear-gradient(0deg,rgba(42, 151, 155, 1) 45%, rgb(129, 208, 208) 70%, rgba(42, 151, 155, 1) 90%);
     overflow:hidden;
+    z-index: -1;
 }
 .bubble {
     position: absolute;
