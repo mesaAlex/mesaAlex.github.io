@@ -23,10 +23,13 @@
 }
 
 /* NAV */
-
 #nav-CAA {
   display: flex;
   gap: 0;
+}
+
+.hidden {
+  display: none;
 }
 
 /* Typography */
@@ -81,6 +84,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 5px 0;
+  padding-left: 20px;
 }
 
 .brand {
@@ -138,7 +142,7 @@ body {
 }
 
 .hero {
-  background-image: url('images/book_image.png');
+  background-image: url('../images/book_image.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -160,7 +164,7 @@ body {
 /* Features Section */
 .features {
   padding: 36px 0;
-  background-image: url('images/texture_midsection.jpeg');
+  background-image: url('../images/texture_midsection.jpeg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -215,7 +219,7 @@ body {
 }
 
 .recipes {
-  background-image: url('images/trending_background.png');
+  background-image: url('../images/trending_background.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -297,9 +301,8 @@ body {
 
 @media (max-width: 600px) {
   .footer-social {
-    width: 32px;
-    bottom: 8px;
-    left: 8px;
+    bottom: -20px;
+    left: -15px;
   }
 }
 
@@ -360,7 +363,7 @@ body {
   }
 
   .mobile-nav-toggle {
-    display: block !important;
+    display: none !important;
   }
 
   .feature-divider {
@@ -374,6 +377,14 @@ body {
   .cta {
     display: none;
   }
+
+  .brand {
+    margin-left: 20px;
+  }
+
+  .hidden {
+    display: block;
+  }
 }
 
 @media (max-width: 600px) {
@@ -381,7 +392,7 @@ body {
     display: none;
   }
   .mobile-nav-toggle {
-    display: none;
+    display: block;
     background: none;
     border: none;
     font-size: 1.5em;
@@ -416,6 +427,10 @@ body {
 
   .mobile-nav.open {
     display: flex;
+  }
+
+  .brand {
+    margin-left: 20px;
   }
 
 }
