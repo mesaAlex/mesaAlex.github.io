@@ -1,11 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
   const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
   const mobileNav = document.querySelector('.mobile-nav');
+  const navCta = document.querySelector('.nav-cta');
   const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
 
-  // Toggle mobile nav when hamburger button is clicked
-  mobileNavToggle.addEventListener('click', () => {
-    mobileNav.classList.toggle('open');
+  // Set active class on mobile nav based on current page
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  mobileNavLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+      link.classList.add('active');
+    }
+  });
+
+  // Show mobile nav on hover
+  navCta.addEventListener('mouseenter', () => {
+    mobileNav.classList.add('open');
+  });
+
+  navCta.addEventListener('mouseleave', () => {
+    mobileNav.classList.remove('open');
   });
 
   // Close mobile nav when a link is clicked
@@ -13,12 +27,5 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', () => {
       mobileNav.classList.remove('open');
     });
-  });
-
-  // Close mobile nav when clicking outside of it
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.nav-cta') && !e.target.closest('.mobile-nav')) {
-      mobileNav.classList.remove('open');
-    }
   });
 });
