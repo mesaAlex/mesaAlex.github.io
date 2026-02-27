@@ -38,6 +38,11 @@
 }
 
 /* Mobile Navigation */
+.mobile-nav-toggle,
+.mobile-nav {
+  display: none;
+}
+
 @media (max-width: 900px) {
   .main-nav {
     display: none !important;
@@ -61,9 +66,6 @@
   .cta {
     display: none;
   }
-}
-
-@media (max-width: 600px) {
 
   .mobile-nav {
     display: none;
