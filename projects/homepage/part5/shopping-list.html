@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Shopping List - Meals on Mesa</title>
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="components.css" />
+    <link rel="stylesheet" href="pages/planning.css" />
+    <link rel="stylesheet" href="nav-styles.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a href="index.html" class="brand">
+                <img src="../images/MOM_LOGO.png" alt="Meals on Mesa" />
+                <span class="brand-text">Meals on Mesa</span>
+            </a>
+            <div class="nav-cta">
+                <nav class="main-nav" aria-label="Main navigation">
+                    <a href="index.html">Home</a>
+                    <a href="recipes.html">Recipes</a>
+                    <a href="meal-planner.html">Meal Planner</a>
+                    <a href="shopping-list.html" class="active">Shopping List</a>
+                    <a href="trending.html">Trends</a>
+                </nav>
+
+                <div class="cta">
+                    <button class="btn primary">Create an Account</button>
+                </div>
+            </div>
+
+            <button class="mobile-nav-toggle hidden" aria-label="Toggle navigation menu">☰</button>
+            <nav class="mobile-nav hidden" aria-label="Mobile navigation">
+                <a href="index.html">Home</a>
+                <a href="recipes.html">Recipes</a>
+                <a href="meal-planner.html">Meal Planner</a>
+                <a href="shopping-list.html" class="active">Shopping List</a>
+                <a href="trending.html">Trends</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="shopping-list-page">
+        <div class="wrap">
+            <section class="shopping-hero">
+                <h1>Your Shopping List</h1>
+                <p class="shopping-subtext">Find your items easier with our automatic Shopping List</p>
+            </section>
+
+            <div class="shopping-list-container">
+                <div class="shopping-columns">
+                    <div class="shopping-category">
+                        <h3>Produce</h3>
+                        <ul class="shopping-items">
+                            <li>
+                                <input type="checkbox" id="item1" />
+                                <label for="item1">Cherry Tomatoes</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="item2" checked />
+                                <label for="item2">Spinach</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="item3" />
+                                <label for="item3">Kale</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="item4" />
+                                <label for="item4">Garlic</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="shopping-category">
+                        <h3>Dairy</h3>
+                        <ul class="shopping-items">
+                            <li>
+                                <input type="checkbox" id="item5" />
+                                <label for="item5">Yellow Cheese</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="item6" />
+                                <label for="item6">Milk</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="item7" />
+                                <label for="item7">Almond Milk</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="shopping-category">
+                        <h3>Pantry</h3>
+                        <ul class="shopping-items">
+                            <li>
+                                <input type="checkbox" id="item8" />
+                                <label for="item8">Olive Oil</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="item9" />
+                                <label for="item9">Vinegar</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="item10" />
+                                <label for="item10">Salt</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="item11" />
+                                <label for="item11">Pepper</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="shopping-columns">
+                    <div class="shopping-category">
+                        <h3>Protein</h3>
+                        <ul class="shopping-items">
+                            <li>
+                                <input type="checkbox" id="item12" />
+                                <label for="item12">Chicken Breast</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="item13" />
+                                <label for="item13">Ground Turkey</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="item14" />
+                                <label for="item14">Salmon</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="item15" />
+                                <label for="item15">Tofu</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="shopping-category">
+                        <h3>Grains & Carbs</h3>
+                        <ul class="shopping-items">
+                            <li>
+                                <input type="checkbox" id="item16" />
+                                <label for="item16">Brown Rice</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="item17" />
+                                <label for="item17">Quinoa</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="item18" />
+                                <label for="item18">Oats</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="item19" />
+                                <label for="item19">Pasta</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="shopping-category">
+                        <h3>Frozen</h3>
+                        <ul class="shopping-items">
+                            <li>
+                                <input type="checkbox" id="item20" />
+                                <label for="item20">Frozen Vegetables</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="item21" />
+                                <label for="item21">Frozen Fruit</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="item22" />
+                                <label for="item22">Frozen Burritos</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn clear-items">Clear Checked Items</button>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <img src="../images/social_media.png" alt="Social Media Links" class="footer-social" />
+        <div class="wrap footer-inner">
+            <div class="brand_small">
+                <img src="../images/MOM_LOGO 2.png" alt="Meals on Mesa" />
+                <p>Meals on Mesa</p>
+            </div>
+            <nav class="footer-nav">
+                <a href="#">About</a>
+                <span class="separator">|</span>
+                <a href="#">Privacy</a>
+                <span class="separator">|</span>
+                <a href="#">Contact</a>
+            </nav>
+            <div class="copyright">© 2026 Meals on Mesa. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -5,38 +5,40 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Meals on Mesa</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="components.css" />
+  <link rel="stylesheet" href="nav-styles.css" />
 </head>
 
 <body>
   <header class="site-header">
     <div class="wrap header-inner">
-      <div class="brand">
+      <a href="index.html" class="brand">
         <img src="../images/MOM_LOGO.png" alt="Meals on Mesa" />
         <span class="brand-text">Meals on Mesa</span>
-      </div>
+      </a>
 
       <div class="nav-cta">
         <nav class="main-nav" aria-label="Main navigation">
-          <a href="#" class="active">Home</a>
-          <a href="#">Recipes</a>
-          <a href="#">Meal Planner</a>
-          <a href="#">Shopping List</a>
-          <a href="#">Trends</a>
+          <a href="index.html" class="active">Home</a>
+          <a href="recipes.html">Recipes</a>
+          <a href="meal-planner.html">Meal Planner</a>
+          <a href="shopping-list.html">Shopping List</a>
+          <a href="trending.html">Trends</a>
         </nav>
 
         <div class="cta">
-          <button class="btn primary">Create an Account</button>
+          <a href="create-account.html" class="btn primary">Create an Account</a>
         </div>
       </div>
 
       <button class="mobile-nav-toggle hidden" aria-label="Toggle navigation menu">☰</button>
       <nav class="mobile-nav hidden" aria-label="Mobile navigation">
-        <a href="#" class="active">Home</a>
-        <a href="#">Recipes</a>
-        <a href="#">Meal Planner</a>
-        <a href="#">Shopping List</a>
-        <a href="#">Trends</a>
+        <a href="index.html" class="active">Home</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="meal-planner.html">Meal Planner</a>
+        <a href="shopping-list.html">Shopping List</a>
+        <a href="trending.html">Trends</a>
       </nav>
     </div>
   </header>
@@ -46,7 +48,7 @@
       <div class="wrap hero-inner">
         <h1>Meals on Mesa</h1>
         <p class="lead">Track your meals. Understand your nutrition. Plan with intention.</p>
-        <a class="btn primary" href="#">Create an Account</a>
+        <a class="btn primary" href="create-account.html">Create an Account</a>
       </div>
     </section>
 
@@ -95,7 +97,7 @@
             <div class="meta"><span>13 min</span><span>6 min</span></div>
           </article>
         </div>
-        <div class="center"><a class="btn" href="#">Browse Recipes</a></div>
+        <div class="center"><a class="btn" href="recipes.html">Browse Recipes</a></div>
       </div>
     </section>
   </main>

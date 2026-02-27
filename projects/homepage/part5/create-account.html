@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <title>Log In</title>
+        <title>Create an Account</title>
         <link rel="stylesheet" href="base.css" />
         <link rel="stylesheet" href="pages/auth.css" />
         <link rel="stylesheet" href="nav-styles.css" />
@@ -22,7 +22,7 @@
                     <a href="recipes.html">Recipes</a>
                     <a href="meal-planner.html">Meal Planner</a>
                     <a href="shopping-list.html">Shopping List</a>
-                    <a href="trending.html">Trends</a>
+                    <a href="trending.html" class="active">Trends</a>
                     </nav>
 
                     <div class="cta">
@@ -41,18 +41,23 @@
             </div>
         </header>
 
-        <main class="log-in-page">
+        <main class="create-account-page">
             <section class="centered">
-                <div class="log-in-icon">♥</div>
-                <h1>Log In</h1>
-                <p class="log-in-subtext">Welcome back! Please enter your details.</p>
+                <div class="signup-icon">♥</div>
+                <h1>Create an Account</h1>
+                <p class="signup-subtext">Join MOM and start planning your healthy meals today</p>
             </section>
         
-            <div class="log-in-container">
+            <div class="signup-container">
 
-                <div class="log-in-greeting">Hi</div>
+                <div class="form-title">Create an Account</div>
                 
-                <form class="log-in-form">
+                <form class="signup-form">
+                    <div class="form-group">
+                        <span class="form-icon">👤</span>
+                        <input type="text" id="fullname" name="fullname" placeholder="Full Name" required />
+                    </div>
+
                     <div class="form-group">
                         <span class="form-icon">✉</span>
                         <input type="email" id="email" name="email" placeholder="Email Address" required />
@@ -63,12 +68,15 @@
                         <input type="password" id="password" name="password" placeholder="Password" required />
                     </div>
 
-                    <button type="submit" class="btn primary log-in-btn">Log In</button>
+                    <div class="form-group">
+                        <span class="form-icon">🔒</span>
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required />
+                    </div>
+
+                    <button type="submit" class="btn primary signup-btn">Sign up</button>
                 </form>
                 
-                <a href="#" class="forgot-password">Forgot Password?</a>
-                
-                <p class="sign-up-text">Don't have an account? <a href="./create-account.html" class="sign-up-link">Create account</a></p>
+                <p class="login-text">Already have an account? <a href="log-in.html" class="login-link">Log In</a></p>
             </div>
         </main>
 
@@ -89,5 +97,7 @@
             <div class="copyright">© 2026 Meals on Mesa. All rights reserved.</div>
             </div>
         </footer>
+
+        <script src="script.js"></script>
     </body>
 </html>

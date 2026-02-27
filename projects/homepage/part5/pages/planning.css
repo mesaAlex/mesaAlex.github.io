@@ -1,0 +1,287 @@
+/* ========================================
+   PLANNING PAGES - Meal Planner and Shopping List styling
+   ======================================== */
+
+/* Meal Planner Page */
+.meal-planner-page {
+  background: #faf7f5;
+  padding: 40px 0;
+  min-height: 80vh;
+}
+
+.planner-hero {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.planner-hero h1 {
+  font-size: 2.5em;
+  margin: 0 0 10px;
+  color: var(--dark);
+  font-weight: 300;
+}
+
+.planner-subtext {
+  color: #666;
+  margin: 0;
+  font-size: 1em;
+}
+
+.meal-planner-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.date-selector {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.date-selector label {
+  font-weight: 500;
+  color: var(--dark);
+}
+
+.week-date-input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: 'Instrument Sans', Arial, sans-serif;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.meal-table-wrapper {
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.meal-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 100%;
+}
+
+.meal-table thead {
+  background: #f5f5f5;
+}
+
+.meal-table th,
+.meal-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  height: 120px;
+}
+
+.meal-table th {
+  font-weight: 600;
+  color: var(--dark);
+  background: #f5f5f5;
+}
+
+.meal-table tbody th {
+  background: #f9f9f9;
+  text-align: left;
+  font-weight: 500;
+}
+
+.meal-cell {
+  padding: 8px;
+}
+
+.meal-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  height: 100%;
+}
+
+.meal-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.meal-item p {
+  font-size: 0.85em;
+  margin: 0;
+  color: var(--dark);
+  font-weight: 500;
+}
+
+.meal-cell.empty a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85em;
+}
+
+.meal-cell.empty a:hover {
+  text-decoration: underline;
+}
+
+.generate-shopping-list {
+  padding: 12px 24px;
+  background: var(--muted);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Instrument Sans', Arial, sans-serif;
+  font-weight: 500;
+  align-self: center;
+  transition: background 0.3s;
+}
+
+.generate-shopping-list:hover {
+  background: #6b8980;
+}
+
+/* Shopping List Page */
+.shopping-list-page {
+  background: #faf7f5;
+  padding: 40px 0;
+  min-height: 80vh;
+}
+
+.shopping-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.shopping-hero h1 {
+  font-size: 2.5em;
+  margin: 0 0 10px;
+  color: var(--dark);
+  font-weight: 300;
+}
+
+.shopping-subtext {
+  color: #666;
+  margin: 0;
+  font-size: 1em;
+}
+
+.shopping-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.shopping-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.shopping-category {
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.shopping-category h3 {
+  font-size: 1.2em;
+  margin: 0 0 16px;
+  color: var(--dark);
+  font-weight: 500;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 12px;
+}
+
+.shopping-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.shopping-items li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  color: #333;
+}
+
+.shopping-items input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: var(--muted);
+}
+
+.shopping-items label {
+  cursor: pointer;
+  user-select: none;
+  flex: 1;
+}
+
+.shopping-items input[type="checkbox"]:checked + label {
+  color: #999;
+  text-decoration: line-through;
+}
+
+.clear-items {
+  padding: 12px 24px;
+  background: var(--muted);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Instrument Sans', Arial, sans-serif;
+  font-weight: 500;
+  align-self: center;
+  transition: background 0.3s;
+}
+
+.clear-items:hover {
+  background: #6b8980;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .shopping-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .meal-table th,
+  .meal-table td {
+    padding: 8px 4px;
+    height: 100px;
+    font-size: 0.85em;
+  }
+}
+
+@media (max-width: 600px) {
+  .planner-hero h1,
+  .shopping-hero h1 {
+    font-size: 1.8em;
+  }
+
+  .shopping-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .meal-table {
+    min-width: 600px;
+  }
+
+  .meal-table th,
+  .meal-table td {
+    padding: 8px;
+    height: auto;
+  }
+
+  .meal-item img {
+    width: 40px;
+    height: 40px;
+  }
+}

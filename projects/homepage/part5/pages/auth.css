@@ -1,0 +1,265 @@
+/* ========================================
+   AUTH PAGES - Login and Create Account styling
+   ======================================== */
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 20vh;
+  padding: 0;
+}
+
+/* Log In Page */
+.log-in-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: 40px 20px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../images/account_page_background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.log-in-container {
+  background: #fff;
+  border-radius: 10px;
+  padding: 60px 40px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.log-in-icon {
+  font-size: 3em;
+  margin-bottom: 20px;
+  display: block;
+  color: var(--accent);
+}
+
+.log-in-container h1 {
+  font-size: 2.5em;
+  margin: 0 0 10px;
+  color: var(--dark);
+  font-weight: 300;
+}
+
+.log-in-subtext {
+  color: #666;
+  margin: 0 0 30px;
+  font-size: 1em;
+}
+
+.log-in-greeting {
+  font-size: 1.8em;
+  color: var(--dark);
+  margin: 30px 0 20px;
+  font-weight: 300;
+}
+
+.log-in-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 30px 0;
+}
+
+.form-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form-icon {
+  position: absolute;
+  left: 15px;
+  font-size: 1.2em;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px 12px 45px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1em;
+  font-family: 'Instrument Sans', Arial, sans-serif;
+  transition: border-color 0.3s;
+}
+
+.form-group input::placeholder {
+  color: #999;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(141, 91, 71, 0.1);
+}
+
+.log-in-btn {
+  padding: 12px 20px;
+  margin-top: 10px;
+  font-size: 1em;
+  background-color: var(--muted);
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Instrument Sans', Arial, sans-serif;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.log-in-btn:hover {
+  background-color: #6b8980;
+}
+
+.forgot-password {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.95em;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.sign-up-text {
+  margin: 30px 0 0;
+  color: #666;
+  font-size: 0.95em;
+}
+
+.sign-up-link {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.sign-up-link:hover {
+  text-decoration: underline;
+}
+
+/* Create Account Page */
+.create-account-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: 40px 20px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../images/account_page_background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.centered h1 {
+  font-size: 2.5em;
+  margin: 0 0 10px;
+  color: var(--dark);
+  font-weight: 300;
+}
+
+.signup-subtext {
+  color: #666;
+  margin: 0;
+  font-size: 1em;
+}
+
+.signup-icon {
+  font-size: 3em;
+  margin-bottom: 20px;
+  display: block;
+  color: var(--accent);
+}
+
+.signup-container {
+  background: #fff;
+  border-radius: 10px;
+  padding: 60px 40px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.form-title {
+  font-size: 1.8em;
+  color: var(--dark);
+  margin: 0 0 30px;
+  font-weight: 300;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0 0 20px;
+}
+
+.signup-btn {
+  padding: 12px 20px;
+  margin-top: 10px;
+  font-size: 1em;
+  background-color: var(--muted);
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Instrument Sans', Arial, sans-serif;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.signup-btn:hover {
+  background-color: #6b8980;
+}
+
+.login-text {
+  margin: 20px 0 0;
+  color: #666;
+  font-size: 0.95em;
+}
+
+.login-link {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .signup-container {
+    padding: 40px 25px;
+  }
+
+  .centered h1 {
+    font-size: 2em;
+  }
+
+  .form-title {
+    font-size: 1.5em;
+  }
+
+  .log-in-container {
+    padding: 40px 25px;
+  }
+
+  .log-in-container h1 {
+    font-size: 2em;
+  }
+}
