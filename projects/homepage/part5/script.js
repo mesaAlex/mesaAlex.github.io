@@ -14,12 +14,27 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Show mobile nav on hover
-  navCta.addEventListener('mouseenter', () => {
+  let navTimeout;
+
+  mobileNavToggle.addEventListener('mouseenter', () => {
+    clearTimeout(navTimeout);
     mobileNav.classList.add('open');
   });
 
-  navCta.addEventListener('mouseleave', () => {
-    mobileNav.classList.remove('open');
+  mobileNavToggle.addEventListener('mouseleave', () => {
+    navTimeout = setTimeout(() => {
+      mobileNav.classList.remove('open');
+    }, 150);
+  });
+
+  mobileNav.addEventListener('mouseenter', () => {
+    clearTimeout(navTimeout);
+  });
+
+  mobileNav.addEventListener('mouseleave', () => {
+    navTimeout = setTimeout(() => {
+      mobileNav.classList.remove('open');
+    }, 150);
   });
 
   // Close mobile nav when a link is clicked

@@ -26,14 +26,14 @@
 
 .main-nav a.active {
   font-weight: bold;
-  text-shadow: 4px 4px 6px rgba(0,0,0,0.18);
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.18);
 }
 
 .cta .btn {
   padding: 8px 12px;
   border-radius: 6px;
   border: none;
-  background: rgba(141,91,71,0.95);
+  background: rgba(141, 91, 71, 0.95);
   color: #fff;
 }
 
@@ -68,14 +68,20 @@
   .mobile-nav {
     display: none;
     flex-direction: column;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     position: absolute;
-    top: calc(100% + 12px);
+    top: calc(100% + 5px);
     right: 0;
     z-index: 100;
-    gap: 0.6em;
+    gap: 0.5em;
+    padding: 12px;
+    border-radius: 12px;
     transition: all 0.3s ease;
-    min-width: 200px;
+    min-width: 220px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
   }
 
   .mobile-nav a {
@@ -86,46 +92,43 @@
     display: block;
     transition: all 0.3s ease;
     font-size: 0.95em;
-    font-weight: normal;
+    font-weight: 500;
     text-align: left;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
 
   .mobile-nav a:nth-child(1) {
-    background: rgba(141, 91, 71, 0.15);
+    background: rgba(141, 91, 71, 0.25);
   }
 
   .mobile-nav a:nth-child(2) {
-    background: rgba(122, 154, 142, 0.15);
+    background: rgba(122, 154, 142, 0.25);
   }
 
   .mobile-nav a:nth-child(3) {
-    background: rgba(240, 202, 155, 0.25);
+    background: rgba(240, 202, 155, 0.45);
   }
 
   .mobile-nav a:nth-child(4) {
-    background: rgba(157, 135, 110, 0.15);
+    background: rgba(157, 135, 110, 0.25);
   }
 
   .mobile-nav a:nth-child(5) {
-    background: rgba(141, 91, 71, 0.2);
+    background: rgba(141, 91, 71, 0.3);
   }
 
   .mobile-nav a:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: translateX(4px);
+    filter: brightness(0.95);
   }
 
   .mobile-nav a.active {
     font-weight: bold;
-    box-shadow: 0 4px 12px rgba(141, 91, 71, 0.3);
+    box-shadow: inset 4px 0 0 rgba(141, 91, 71, 0.8);
   }
 
+  .mobile-nav-toggle:hover+.mobile-nav,
+  .mobile-nav:hover,
   .mobile-nav.open {
-    display: flex;
-  }
-
-  .nav-cta:hover .mobile-nav {
     display: flex;
   }
 }
