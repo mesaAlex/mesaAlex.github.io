@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
   const mobileNav = document.querySelector('.mobile-nav');
-  const navCta = document.querySelector('.nav-cta');
   const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
 
   // Set active class on mobile nav based on current page
@@ -16,31 +15,121 @@ document.addEventListener('DOMContentLoaded', () => {
   // Show mobile nav on hover
   let navTimeout;
 
-  mobileNavToggle.addEventListener('mouseenter', () => {
-    clearTimeout(navTimeout);
-    mobileNav.classList.add('open');
-  });
-
-  mobileNavToggle.addEventListener('mouseleave', () => {
-    navTimeout = setTimeout(() => {
-      mobileNav.classList.remove('open');
-    }, 150);
-  });
-
-  mobileNav.addEventListener('mouseenter', () => {
-    clearTimeout(navTimeout);
-  });
-
-  mobileNav.addEventListener('mouseleave', () => {
-    navTimeout = setTimeout(() => {
-      mobileNav.classList.remove('open');
-    }, 150);
-  });
-
-  // Close mobile nav when a link is clicked
-  mobileNavLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      mobileNav.classList.remove('open');
+  if (mobileNavToggle && mobileNav) {
+    mobileNavToggle.addEventListener('mouseenter', () => {
+      clearTimeout(navTimeout);
+      mobileNav.classList.add('open');
     });
-  });
+
+    mobileNavToggle.addEventListener('mouseleave', () => {
+      navTimeout = setTimeout(() => {
+        mobileNav.classList.remove('open');
+      }, 150);
+    });
+
+    mobileNav.addEventListener('mouseenter', () => {
+      clearTimeout(navTimeout);
+    });
+
+    mobileNav.addEventListener('mouseleave', () => {
+      navTimeout = setTimeout(() => {
+        mobileNav.classList.remove('open');
+      }, 150);
+    });
+
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+      });
+    });
+
+    mobileNavToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('open');
+    });
+  }
+
+  const slideshowRoot = document.querySelector('[data-slideshow]');
+  if (slideshowRoot) {
+    const slideshowImage = slideshowRoot.querySelector('.slideshow-image');
+    const captionBox = slideshowRoot.querySelector('.slideshow-caption');
+    const captionTitle = slideshowRoot.querySelector('.slideshow-caption-title');
+    const dotsContainer = slideshowRoot.querySelector('.slide-dots');
+
+    const slides = [
+      {
+        src: '../images/homepage-slideshow/slide1.png',
+        title: 'Track meals with clarity'
+      },
+      {
+        src: '../images/homepage-slideshow/slide2.png',
+        title: 'Understand your nutrition'
+      },
+      {
+        src: '../images/homepage-slideshow/slide3.png',
+        title: 'Plan smarter each week'
+      }
+    ];
+
+    let currentIndex = 0;
+    let slideshowTimer;
+    let isTransitioning = false;
+    const fadeDuration = 550;
+
+    const renderDots = () => {
+      dotsContainer.innerHTML = '';
+      slides.forEach((_, index) => {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = `slide-dot${index === currentIndex ? ' active' : ''}`;
+        dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+        dot.addEventListener('click', () => {
+          goToSlide(index, true);
+          startTimer();
+        });
+        dotsContainer.appendChild(dot);
+      });
+    };
+
+    const goToSlide = (index, animated = false) => {
+      const nextIndex = (index + slides.length) % slides.length;
+
+      if (!animated) {
+        currentIndex = nextIndex;
+        slideshowImage.src = slides[currentIndex].src;
+        captionTitle.textContent = slides[currentIndex].title;
+        renderDots();
+        return;
+      }
+
+      if (isTransitioning || nextIndex === currentIndex) {
+        return;
+      }
+
+      isTransitioning = true;
+      slideshowImage.classList.add('is-fading');
+      captionBox.classList.add('is-fading');
+
+      window.setTimeout(() => {
+        currentIndex = nextIndex;
+        slideshowImage.src = slides[currentIndex].src;
+        captionTitle.textContent = slides[currentIndex].title;
+        renderDots();
+        slideshowImage.classList.remove('is-fading');
+        captionBox.classList.remove('is-fading');
+        isTransitioning = false;
+      }, fadeDuration);
+    };
+
+    const nextSlide = () => {
+      goToSlide(currentIndex + 1, true);
+    };
+
+    const startTimer = () => {
+      clearInterval(slideshowTimer);
+      slideshowTimer = setInterval(nextSlide, 3000);
+    };
+
+    goToSlide(0, false);
+    startTimer();
+  }
 });
