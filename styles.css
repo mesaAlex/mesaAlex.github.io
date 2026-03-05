@@ -33,6 +33,17 @@ li {
     max-height: 300px;
 }
 
+.image {
+    width: 80%;
+    border-radius: 15px;
+    padding: 1px;
+    border: #1c1914 1px solid;
+    margin: 5px;
+    max-width: 500px;
+    max-height: 300px;
+    
+}
+
 #content section a {
     display: flex;
     justify-content: center;
