@@ -33,15 +33,20 @@ li {
     max-height: 300px;
 }
 
+#content section img.image {
+    display: block;
+    margin: 30px auto;
+}
+
 .image {
     width: 80%;
     border-radius: 15px;
     padding: 1px;
     border: #1c1914 1px solid;
-    margin: 5px;
     max-width: 500px;
     max-height: 300px;
-    
+    display: block;
+    margin: 10px auto;
 }
 
 #content section a {
