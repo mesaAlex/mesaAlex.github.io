@@ -1,0 +1,98 @@
+[
+  {
+    "_id": 1,
+    "img_name": "projects/homepage/images/salmon_salad.png",
+    "title": "Salmon Salad",
+    "description": "Fresh greens with roasted salmon, cucumber, and lemon vinaigrette.",
+    "prep_minutes": 10,
+    "cook_minutes": 12,
+    "protein_type": "Salmon",
+    "diet": "Low-Carb",
+    "tags": ["High-Protein", "Gut-Friendly"],
+    "featured": true
+  },
+  {
+    "_id": 2,
+    "img_name": "projects/homepage/images/chicken_salad.png",
+    "title": "Chicken Salad",
+    "description": "Lean chicken with crisp vegetables for an easy meal-prep lunch.",
+    "prep_minutes": 12,
+    "cook_minutes": 13,
+    "protein_type": "Chicken",
+    "diet": "Low-Carb",
+    "tags": ["High-Protein", "Meal Prep"],
+    "featured": true
+  },
+  {
+    "_id": 3,
+    "img_name": "projects/homepage/images/tofu_salad.png",
+    "title": "Tofu Salad",
+    "description": "Plant-based salad with tofu, greens, and colorful vegetables.",
+    "prep_minutes": 12,
+    "cook_minutes": 6,
+    "protein_type": "Tofu",
+    "diet": "Vegetarian",
+    "tags": ["Plant-Based", "High-Protein"],
+    "featured": true
+  },
+  {
+    "_id": 4,
+    "img_name": "projects/homepage/images/salmon_salad.png",
+    "title": "Mediterranean Salmon Bowl",
+    "description": "Salmon with tomatoes, cucumber, and herbs in a Mediterranean-style bowl.",
+    "prep_minutes": 15,
+    "cook_minutes": 14,
+    "protein_type": "Salmon",
+    "diet": "Mediterranean",
+    "tags": ["Omega-3", "Balanced"],
+    "featured": false
+  },
+  {
+    "_id": 5,
+    "img_name": "projects/homepage/images/chicken_salad.png",
+    "title": "Grilled Chicken Power Bowl",
+    "description": "Grilled chicken with greens and grains for a balanced dinner option.",
+    "prep_minutes": 14,
+    "cook_minutes": 15,
+    "protein_type": "Chicken",
+    "diet": "Balanced",
+    "tags": ["High-Protein", "Post-Workout"],
+    "featured": false
+  },
+  {
+    "_id": 6,
+    "img_name": "projects/homepage/images/tofu_salad.png",
+    "title": "Sesame Tofu Crunch Salad",
+    "description": "Baked tofu with crunchy vegetables and a light sesame-inspired flavor.",
+    "prep_minutes": 15,
+    "cook_minutes": 10,
+    "protein_type": "Tofu",
+    "diet": "Vegetarian",
+    "tags": ["Plant-Based", "Crunchy"],
+    "featured": false
+  },
+  {
+    "_id": 7,
+    "img_name": "projects/homepage/images/salmon_salad.png",
+    "title": "Citrus Salmon Plate",
+    "description": "A bright salmon dish with citrus notes and mixed greens.",
+    "prep_minutes": 9,
+    "cook_minutes": 12,
+    "protein_type": "Salmon",
+    "diet": "Low-Carb",
+    "tags": ["Fresh", "High-Protein"],
+    "featured": false
+  },
+  {
+    "_id": 8,
+    "img_name": "projects/homepage/images/chicken_salad.png",
+    "title": "Herbed Chicken Garden Salad",
+    "description": "Herbed chicken served over a garden salad for a quick healthy meal.",
+    "prep_minutes": 11,
+    "cook_minutes": 12,
+    "protein_type": "Chicken",
+    "diet": "Low-Carb",
+    "tags": ["Lean Protein", "Quick Meal"],
+    "featured": false
+  }
+]

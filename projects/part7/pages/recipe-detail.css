@@ -296,6 +296,57 @@
   font-weight: 600;
 }
 
+.recipe-video-section {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.9fr) minmax(320px, 1.1fr);
+  gap: 28px;
+  align-items: center;
+  margin-top: 40px;
+  padding: 28px;
+  background: linear-gradient(135deg, #f4ebe4 0%, #fff 100%);
+  border-radius: 18px;
+  box-shadow: 0 10px 24px rgba(59, 47, 42, 0.08);
+}
+
+.recipe-video-copy h2 {
+  text-align: left;
+  font-size: 1.8rem;
+  margin: 0 0 12px;
+  font-weight: 400;
+}
+
+.recipe-video-copy p {
+  margin: 0;
+  color: #5f5550;
+  line-height: 1.7;
+}
+
+.recipe-video-eyebrow {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.recipe-video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(59, 47, 42, 0.14);
+  background: #000;
+}
+
+.recipe-video-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
 @media (max-width: 900px) {
   .recipe-header {
     flex-direction: column;
@@ -316,6 +367,10 @@
     border-top: 1px solid #ddd;
     padding-left: 0;
     padding-top: 16px;
+  }
+
+  .recipe-video-section {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -353,5 +408,15 @@
   .recipe-details-box {
     padding: 12px;
     gap: 12px;
+  }
+
+  .recipe-video-section {
+    margin-top: 28px;
+    padding: 18px;
+    gap: 18px;
+  }
+
+  .recipe-video-copy h2 {
+    font-size: 1.45rem;
   }
 }
