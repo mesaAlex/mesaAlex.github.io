@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Meal Planner - Meals on Mesa</title>
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="components.css" />
+    <link rel="stylesheet" href="pages/planning.css" />
+    <link rel="stylesheet" href="nav-styles.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a href="index.html" class="brand">
+                <img src="../homepage/images/MOM_LOGO.png" alt="Meals on Mesa" />
+                <span class="brand-text">Meals on Mesa</span>
+            </a>
+            <div class="nav-cta">
+                <nav class="main-nav" aria-label="Main navigation">
+                    <a href="index.html">Home</a>
+                    <a href="recipes.html">Recipes</a>
+                    <a href="meal-planner.html" class="active">Meal Planner</a>
+                    <a href="shopping-list.html">Shopping List</a>
+                </nav>
+
+                <div class="cta">
+                    <button class="btn primary">Create an Account</button>
+                </div>
+            </div>
+
+            <button class="mobile-nav-toggle hidden" aria-label="Toggle navigation menu">☰</button>
+            <nav class="mobile-nav hidden" aria-label="Mobile navigation">
+                <a href="index.html">Home</a>
+                <a href="recipes.html">Recipes</a>
+                <a href="meal-planner.html" class="active">Meal Planner</a>
+                <a href="shopping-list.html">Shopping List</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="meal-planner-page">
+        <div class="wrap">
+            <section class="planner-hero">
+                <h1>Weekly Library Planner</h1>
+                <p class="planner-subtext">Plan meals for the week and update your shopping list automatically.</p>
+            </section>
+
+            <div class="meal-planner-container">
+                <div class="date-selector">
+                    <label for="week-date">Week of:</label>
+                    <input type="date" id="week-date" class="week-date-input" value="2026-04-29" />
+                </div>
+
+                <div class="meal-table-wrapper">
+                    <table class="meal-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Mon</th>
+                                <th>Tue</th>
+                                <th>Wed</th>
+                                <th>Thu</th>
+                                <th>Fri</th>
+                                <th>Sat</th>
+                                <th>Sun</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Breakfast</th>
+                                <td class="meal-cell">
+                                    <div class="meal-item">
+                                        <img src="../homepage/images/tofu_salad.png" alt="Tofu Salad" />
+                                        <p>Tofu Salad</p>
+                                    </div>
+                                </td>
+                                <td class="meal-cell empty"><a href="#">+ Add Recipe</a></td>
+                                <td class="meal-cell empty"><a href="#">+ Add Recipe</a></td>
+                                <td class="meal-cell empty"><a href="#">+ Add Recipe</a></td>
+                                <td class="meal-cell empty"><a href="#">+ Add Recipe</a></td>
+                                <td class="meal-cell empty"><a href="#">+ Add Recipe</a></td>
+                                <td class="meal-cell empty"><a href="#">+ Add Recipe</a></td>
+                            </tr>
+                            <tr>
+                                <th>Lunch</th>
+                                <td class="meal-cell empty"><a href="#">+ Add Recipe</a></td>
+                                <td class="meal-cell empty"><a href="#">+ Add Recipe</a></td>
+                                <td class="meal-cell empty"><a href="#">+ Add Recipe</a></td>
+                                <td class="meal-cell empty"><a href="#">+ Add Recipe</a></td>
+                                <td class="meal-cell empty"><a href="#">+ Add Recipe</a></td>
+                                <td class="meal-cell empty"><a href="#">+ Add Recipe</a></td>
+                                <td class="meal-cell empty"><a href="#">+ Add Recipe</a></td>
+                            </tr>
+                            <tr>
+                                <th>Dinner</th>
+                                <td class="meal-cell empty"><a href="#">+ Add Recipe</a></td>
+                                <td class="meal-cell empty"><a href="#">+ Add Recipe</a></td>
+                                <td class="meal-cell empty"><a href="#">+ Add Recipe</a></td>
+                                <td class="meal-cell empty"><a href="#">+ Add Recipe</a></td>
+                                <td class="meal-cell empty"><a href="#">+ Add Recipe</a></td>
+                                <td class="meal-cell empty"><a href="#">+ Add Recipe</a></td>
+                                <td class="meal-cell empty"><a href="#">+ Add Recipe</a></td>
+                            </tr>
+                            <tr>
+                                <th>Supper</th>
+                                <td class="meal-cell empty"><a href="#">+ Add Recipe</a></td>
+                                <td class="meal-cell empty"><a href="#">+ Add Recipe</a></td>
+                                <td class="meal-cell empty"><a href="#">+ Add Recipe</a></td>
+                                <td class="meal-cell empty"><a href="#">+ Add Recipe</a></td>
+                                <td class="meal-cell empty"><a href="#">+ Add Recipe</a></td>
+                                <td class="meal-cell empty"><a href="#">+ Add Recipe</a></td>
+                                <td class="meal-cell empty"><a href="#">+ Add Recipe</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <button class="btn generate-shopping-list">Generate Shopping List</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <div class="footer-social-wrap">
+                <img src="../homepage/images/social_media.png" alt="Social Media Links" class="footer-social" />
+            </div>
+            <div class="brand_small">
+                <img src="../homepage/images/MOM_LOGO 2.png" alt="Meals on Mesa" />
+                <p>Meals on Mesa</p>
+            </div>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <span class="separator">|</span>
+                <a href="recipes.html">Recipes</a>
+                <span class="separator">|</span>
+                <a href="meal-planner.html">Meal Planner</a>
+                <span class="separator">|</span>
+                <a href="shopping-list.html">Shopping List</a>
+            </nav>
+            <div class="copyright">© 2026 Meals on Mesa. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

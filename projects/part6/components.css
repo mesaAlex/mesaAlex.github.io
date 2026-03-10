@@ -1,0 +1,170 @@
+/* ========================================
+   COMPONENTS - Reusable card and component styles
+   ======================================== */
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  text-align: left;
+}
+
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.card h4 {
+  margin: 8px 0;
+}
+
+.tags span {
+  display: inline-block;
+  background: #e6f0ea;
+  color: var(--muted);
+  padding: 4px 8px;
+  border-radius: 12px;
+  margin-right: 6px;
+  font-size: 12px;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  color: #8b8b8b;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.homepage-slideshow {
+  width: 100%;
+  margin: 0;
+  padding: 10px 0 30px;
+}
+
+.slideshow-shell {
+  position: relative;
+  width: 100%;
+  border-radius: 0;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
+}
+
+.slideshow-image {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+  opacity: 1;
+  transition: opacity 0.55s ease-in-out;
+}
+
+.slideshow-image.is-fading {
+  opacity: 0;
+}
+
+.slideshow-caption {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 42px;
+  max-width: 640px;
+  background: rgba(59, 47, 42, 0.68);
+  color: #fff;
+  padding: 14px 18px;
+  border-radius: 10px;
+  opacity: 1;
+  transition: opacity 0.55s ease-in-out;
+}
+
+.slideshow-caption.is-fading {
+  opacity: 0;
+}
+
+.slideshow-caption-title {
+  margin: 0 0 6px;
+  font-size: 1.45rem;
+  line-height: 1.2;
+}
+
+.slide-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.slide-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.65);
+  cursor: pointer;
+}
+
+.slide-dot.active {
+  background: var(--accent);
+}
+
+.recipe-page-slideshow {
+  margin-bottom: 30px;
+}
+
+.recipe-slideshow-shell {
+  border-radius: 16px;
+}
+
+.recipe-slideshow-shell .slideshow-image {
+  height: 360px;
+}
+
+.recipe-slideshow-caption {
+  max-width: 420px;
+}
+
+@media (max-width: 900px) {
+  .recipe-slideshow-shell .slideshow-image {
+    height: 300px;
+  }
+
+  .slideshow-image {
+    height: 320px;
+  }
+
+  .slideshow-caption {
+    max-width: 100%;
+    bottom: 34px;
+  }
+
+  .slideshow-caption-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .recipe-slideshow-shell .slideshow-image {
+    height: 240px;
+  }
+
+  .slideshow-image {
+    height: 240px;
+  }
+
+  .slideshow-caption {
+    left: 12px;
+    right: 12px;
+    bottom: 28px;
+    padding: 10px 12px;
+  }
+
+  .slideshow-caption-title {
+    font-size: 1rem;
+  }
+}

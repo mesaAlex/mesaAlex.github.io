@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Log In</title>
+        <link rel="stylesheet" href="base.css" />
+        <link rel="stylesheet" href="pages/auth.css" />
+        <link rel="stylesheet" href="nav-styles.css" />
+    </head>
+
+    <body>
+        <header class="site-header">
+            <div class="wrap header-inner">
+                <a href="index.html" class="brand">
+                    <img src="../homepage/images/MOM_LOGO.png" alt="Meals on Mesa" />
+                    <span class="brand-text">Meals on Mesa</span>
+                </a>
+                <div class="nav-cta">
+                    <nav class="main-nav" aria-label="Main navigation">
+                    <a href="index.html">Home</a>
+                    <a href="recipes.html">Recipes</a>
+                    <a href="meal-planner.html">Meal Planner</a>
+                    <a href="shopping-list.html">Shopping List</a>
+                    </nav>
+
+                    <div class="cta">
+                    <a href="create-account.html" class="btn primary">Create an Account</a>
+                    </div>
+                </div>
+
+                <button class="mobile-nav-toggle hidden" aria-label="Toggle navigation menu">☰</button>
+                <nav class="mobile-nav hidden" aria-label="Mobile navigation">
+                    <a href="index.html">Home</a>
+                    <a href="recipes.html">Recipes</a>
+                    <a href="meal-planner.html">Meal Planner</a>
+                    <a href="shopping-list.html">Shopping List</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="log-in-page">
+            <section class="centered">
+                <div class="log-in-icon">♥</div>
+                <h1>Log In</h1>
+                <p class="log-in-subtext">Welcome back! Please enter your details.</p>
+            </section>
+        
+            <div class="log-in-container">
+
+                <div class="log-in-greeting">Hi</div>
+                
+                <form class="log-in-form">
+                    <div class="form-group">
+                        <span class="form-icon">✉</span>
+                        <input type="email" id="email" name="email" placeholder="Email Address" required />
+                    </div>
+
+                    <div class="form-group">
+                        <span class="form-icon">🔒</span>
+                        <input type="password" id="password" name="password" placeholder="Password" required />
+                    </div>
+
+                    <button type="submit" class="btn primary log-in-btn">Log In</button>
+                </form>
+                
+                <a href="#" class="forgot-password">Forgot Password?</a>
+                
+                <p class="sign-up-text">Don't have an account? <a href="./create-account.html" class="sign-up-link">Create account</a></p>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="wrap footer-inner">
+            <div class="footer-social-wrap">
+                <img src="../homepage/images/social_media.png" alt="Social Media Links" class="footer-social" />
+            </div>
+            <div class="brand_small small">
+                <img src="../homepage/images/MOM_LOGO 2.png" alt="Meals on Mesa" />
+                <p>Meals on Mesa</p>
+            </div>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <span class="separator">|</span>
+                <a href="recipes.html">Recipes</a>
+                <span class="separator">|</span>
+                <a href="meal-planner.html">Meal Planner</a>
+                <span class="separator">|</span>
+                <a href="shopping-list.html">Shopping List</a>
+            </nav>
+            <div class="copyright">© 2026 Meals on Mesa. All rights reserved.</div>
+            </div>
+        </footer>
+    </body>
+</html>
