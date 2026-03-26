@@ -74,6 +74,10 @@ li {
 #mainfooter p {
     text-align: right;
 }
+.columns {
+    display: flex;
+    flex-direction: column;
+}
 
 /* Gallery */
 #gallery {
